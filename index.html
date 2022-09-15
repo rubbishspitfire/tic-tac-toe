@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon/board.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <h1 class="game-name">Tic Tac Toe</h1>
+      <button class="start">Start Game</button>
+      
+      <div class="name">
+        <h3>Choose the number of players</h3>
+
+        <label for="name">Player 1</label>
+        <input 
+        type="text" 
+        id="player-1" 
+        placeholder="Enter Name" 
+        autocomplete="off" 
+        required>
+        <br/>
+        <label for="name">Player 2</label>
+        <input 
+        type="text" 
+        id="player-2" 
+        placeholder="Enter Name" 
+        autocomplete="off" 
+        required>
+        <br/>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="game invisible">
+      <table class="board-one">
+        <div class="option-wrapper">
+          <input type="radio" name="no-of-players" id="one-player">You against a dumb computer
+          <input type="radio" name="no-of-players" id="two-players">Two players
+          <input type="radio" name="no-of-players" id="smart-comp">You against a smart computer
+        </div>
+      </div>
+      <div class="game-wrapper">
+        <img src="./assets/line.png" alt="" id="top-hor">
+        <img src="./assets/line.png" alt="" id="mid-hor">
+        <img src="./assets/line.png" alt="" id="bot-hor">
+        <img src="./assets/line.png" alt="" id="left-vert" class="vertical">
+        <img src="./assets/line.png" alt="" id="mid-vert" class="vertical">
+        <img src="./assets/line.png" alt="" id="right-vert" class="vertical">
+        <img src="./assets/line.png" alt="" id="down-to-right">
+        <img src="./assets/line.png" alt="" id="up-to-right">
+        <div class="gameboard">
+          
+          <ul class="game-spaces">
+            <li id="box1">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+            <li id="box2">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+            <li id="box3">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+            <li id="box4">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+            <li id="box5">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+            <li id="box6">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+            <li id="box7">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+            <li id="box8">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+            <li id="box9">
+              <img src="./assets/transparent.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="turn-container">
+      <p id="player">Player 0</p>
+      <p id="turn-or-win">it's your turn</p>
+      <img src="./assets/replay.png" alt="REPLAY" id="replay">
+    </div>
+  </body>
+</html>
