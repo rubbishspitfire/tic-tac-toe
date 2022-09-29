@@ -1,209 +1,176 @@
 body {
-    background-image: url('./assets/wall.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-sizing: border-box;
-    font-family: 'Walter Turncoat', cursive;
-    overflow: hidden;
-  }
-  
-  .game-container {
-    background-image: url('./assets/blackboard.jpg');
-    background-size: cover;
-    border: 15px solid #6B553B;
-    height: 500px;
-    margin: 0 auto;
-    position: relative;
-    width: 800px;
-  }
-  
-  #starting-board {
-    border: 15px solid black;
-    height: 500px;
-    margin: 0 auto;
-    position: relative;
-    bottom: 15px;
-    right: 15px;
-    width: 800px;
-    z-index: 1000;
-    background-color: #a4508b;
-    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  h2 {
-    font-size: 40px;
-  }
-  
-  h3 {
-    font-size: 28px;
-  }
-  
-  .option-wrapper {
-    font-size: 19px;
-    position: relative;
-    right: 8px;
-  }
-  
-  .option-wrapper input {
-    margin-left: 18px;
-  }
-  
-  #start {
-    margin-top: 30px;
-    height: 50px;
-    width: 100px;
-    font-size: 28px;
-    font-family: 'Walter Turncoat', cursive;
-    border-radius: 10px;
-    border: 2px solid black;
-  }
-  
-  #start:hover {
-    cursor: pointer;
-  }
-  
-  #start:focus {
-    outline: none;
-  }
-  
-  .game-wrapper {
-    margin: 0 auto;
-    position: relative;
-    width: 535px;
-    padding-right: 20px;
-    padding-top: 10px;
-  }
-  
-  .game-wrapper img {
-    position: absolute;
-    display: none;
-  }
-  
-  #top-hor {
-    top: -65px;
-  }
-  
-  #mid-hor {
-    top: 70px;
-  }
-  
-  #bot-hor {
-    bottom: -40px;
-  }
-  
-  .vertical {
-    transform: rotate(90deg);
-    top: 140px;
-    width: 420px;
-  }
-  
-  #left-vert {
-    left: -80px;
-  }
-  
-  #mid-vert {
-    left: 90px;
-  }
-  
-  #right-vert {
-    left: 260px;
-  }
-  
-  #down-to-right {
-    top: 80px;
-    transform: rotate(40deg);
-  }
-  
-  #up-to-right {
-    top: 70px;
-    transform: rotate(-40deg);
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 50px;
-  }
-  
-  .gameboard {
-    background-color: transparent;
-    height: 474px;
-    width: 474px;
-      margin-right: 100px;
-  }
-  
-  .game-spaces {
-    list-style-type: none;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, 165px);
-    grid-template-rows: repeat(3, 135px);
-  }
-  
-  .game-spaces li {
-    display: inline-block;
-    height: 135px;
-    width: 165px;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .game-spaces li:hover {
-    cursor: url('./assets/cursor.cur'), auto;
-  }
-  
-  li img {
-    height: 100px;
-    width: 100px;
-    padding-left: 30px;
-    padding-top: 13px;
-    display: block !important;
-    border: 0;
-  }
-  
-  li img:focus {
-    outline: none;
-  }
-  
-  .game-mark {
-    height: 100px;
-    width: 100px;
-  }
-  
-  img.circle {
-    background: url(./assets/circle.png);
-    z-index: 10;
-  }
-  
-  img.x-mark {
-    background: url(./assets/x-mark.png);
-    z-index: 1000;
-  }
-  
-  #turn-container {
-    background-color: #e4d1a7;
-    border: 2px solid #6b553b;
-    border-radius: 10px;
-    margin: 30px auto;
-    position: relative;
-    font-size: 40px;
-    text-align: center;
-    width: 300px;
-    display: none;
-  }
-  
-  #turn-container p {
-    margin: 0;
-  }
-  
-  #replay {
-    height: 50px;
-    display: none;
-  }
-  
-  #replay:hover {
-    cursor: pointer;
-  }
+  font-size: 36px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.item {
+  margin: 0.4em;
+}
+
+.board {
+  background-color: #12232E;
+  background-color: #553d67;
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px;
+  width: 100%;
+  padding: 1em 0 1em 0;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+.field {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  background-color: #553d67;
+  color: #12232E;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 3px solid #203647;
+  border-right: 3px solid #203647;
+  outline: none;
+}
+
+.field.no-r {
+  border-right: none;
+}
+
+.field.no-b {
+  border-bottom: none;
+}
+
+.field p {
+  margin: 0px;
+}
+
+.field:hover {
+  cursor: pointer;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px 7px 22px -6px lightgrey;
+  box-shadow: -1px 7px 22px -6px lightgrey;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.select {
+  align-self: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.btn-p {
+  width: 15em;
+  height: 2.5em;
+  margin: 1em 1em 1em 1em;
+}
+
+.selected {
+  color: #203647;
+  font-weight: 600;
+  border: 2px solid #203647;
+  -webkit-box-shadow: -1px 7px 22px -6px grey;
+  box-shadow: -1px 7px 22px -6px grey;
+}
+
+.not-selected {
+  box-shadow: none;
+  font-weight: 600;
+  color: grey;
+  border-width: 1.5px;
+}
+
+.player {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-around;
+  margin: 0;
+}
+
+.rst {
+  width: 100%;
+  margin: auto;
+}
+
+.restart {
+  width: 100%;
+  height: 3em;
+  border: none;
+  border-radius: 0% 0% 10px 10px / 10px 10px 10px 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+select {
+  outline: none;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #203647;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #203647;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+.win p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  color: white;
+  z-index: 1;
+  -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.winner {
+  position: fixed;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, 0);
+  font-size: 35px;
+}
+
+.sign {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, 0);
+  font-size: 150px;
+  margin: 0;
+}
+
+.o-text {}
+
+.x-text {}
+
+.hide{
+  display: none;
+};
