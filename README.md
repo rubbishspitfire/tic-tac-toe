@@ -12,4 +12,4 @@ Choose X or O and the game begins!
 
 
 ### Live Demo
-- Click [here]https://rubbishspitfire.github.io/tic-tac-toe/)
+- Click [here] (https://rubbishspitfire.github.io/tic-tac-toe/)
